@@ -28,12 +28,13 @@ sudo usermod -aG sudo interadmin
 sudo usermod -aG sudo interadmin2
 
 # Enable automatic system updates
-sudo apt install unattended-upgrades -y
-sudo dpkg-reconfigure -plow unattended-upgrades
+# sudo apt install unattended-upgrades -y
+# sudo dpkg-reconfigure -plow unattended-upgrades
 
-# Download and install Myria CLI binary
+# Download and install Myria CLI binary as intradmin user
 if command -v wget >/dev/null 2>&1; then
-  sudo wget https://downloads-builds.myria.com/node/install.sh -O - | sudo bash
+  sudo -u intradmin wget https://downloads-builds.myria.com/node/install.sh -O - | sudo -u intradmin bash
 else
   echo "wget command not found. Please install wget and try again."
 fi
+
