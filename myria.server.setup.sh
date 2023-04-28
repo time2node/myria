@@ -38,4 +38,5 @@ else
   echo "wget command not found. Please install wget and try again."
 fi
 
-myria-node --start  
+# Reboot the system without requiring manual confirmation
+sudo reboot now
