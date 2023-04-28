@@ -21,11 +21,11 @@ sudo systemctl start fail2ban
 
 # Add new users
 sudo adduser interadmin
-sudo adduser interadmin2
+# sudo adduser interadmin2
 
 # Add users to sudo group
 sudo usermod -aG sudo interadmin
-sudo usermod -aG sudo interadmin2
+# sudo usermod -aG sudo interadmin2
 
 # Enable automatic system updates
 # sudo apt install unattended-upgrades -y
@@ -38,3 +38,4 @@ else
   echo "wget command not found. Please install wget and try again."
 fi
 
+myria-node --start  
