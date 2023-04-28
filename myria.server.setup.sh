@@ -32,7 +32,8 @@ sudo usermod -aG sudo interadmin
 # sudo dpkg-reconfigure -plow unattended-upgrades
 
 # Download and install Myria CLI binary
-sudo wget https://downloads-builds.myria.com/node/install.sh -O - | sudo bash
+sudo wget -q https://downloads-builds.myria.com/node/install.sh -O - | sudo bash
 
-myria-node --start
+# Reboot system automatically
+sudo shutdown -r now
 
