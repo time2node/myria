@@ -39,5 +39,5 @@ else
 fi
 
 # Reboot system automatically
-sudo shutdown -r now
+# sudo shutdown -r now
 
