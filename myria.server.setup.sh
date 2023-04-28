@@ -32,7 +32,11 @@ sudo usermod -aG sudo interadmin
 # sudo dpkg-reconfigure -plow unattended-upgrades
 
 # Download and install Myria CLI binary
-sudo wget -q https://downloads-builds.myria.com/node/install.sh -O - | sudo bash
+if command -v wget >/dev/null 2>&1; then
+  su interadmin -c 'wget https://downloads-builds.myria.com/node/install.sh -O - | sudo bash'
+else
+  echo "wget command not found. Please install wget and try again."
+fi
 
 # Reboot system automatically
 sudo shutdown -r now
