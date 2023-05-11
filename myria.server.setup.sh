@@ -24,7 +24,7 @@ sudo adduser interadmin
 # sudo adduser interadmin2
 
 # Add users to sudo group
-sudo usermod -aG sudo interadmin
+sudo usermod -aG sudo myriaadmin
 # sudo usermod -aG sudo interadmin2
 
 # Enable automatic system updates
