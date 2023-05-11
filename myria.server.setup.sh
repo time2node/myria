@@ -20,7 +20,7 @@ sudo systemctl enable fail2ban
 sudo systemctl start fail2ban
 
 # Add new users
-sudo adduser interadmin
+sudo adduser myriaadmin
 # sudo adduser interadmin2
 
 # Add users to sudo group
