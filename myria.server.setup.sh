@@ -21,11 +21,11 @@ sudo systemctl start fail2ban
 
 # Add new users
 sudo adduser myriaadmin
-# sudo adduser interadmin2
+sudo adduser interadmin
 
 # Add users to sudo group
 sudo usermod -aG sudo myriaadmin
-# sudo usermod -aG sudo interadmin2
+sudo usermod -aG sudo interadmin
 
 # Enable automatic system updates
 # sudo apt install unattended-upgrades -y
