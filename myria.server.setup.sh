@@ -31,7 +31,7 @@ sudo usermod -aG sudo myriaadmin
 
 # Download and install Myria CLI binary
 if command -v wget >/dev/null 2>&1; then
-sudo -u myriaadmin bash -c 'wget https://downloads-builds.myria.com/node/install.sh -O install.sh && chmod +x install.sh && sudo ./install.sh'
+sudo -u myriaadmin bash -c 'wget https://downloads-builds.myria.com/node/install.sh -O install.sh && chmod +x install.sh && ./install.sh'
 
   
 else
