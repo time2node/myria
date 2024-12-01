@@ -34,7 +34,7 @@ if command -v wget >/dev/null 2>&1; then
   sudo myriaadmin 
   wget https://downloads-builds.myria.com/node/install.sh
   chmod 777 install.sh
-  ./install
+  ./install.sh
   
 else
   echo "wget command not found. Please install wget and try again."
