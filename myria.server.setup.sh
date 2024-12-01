@@ -31,7 +31,11 @@ sudo usermod -aG sudo myriaadmin
 
 # Download and install Myria CLI binary
 if command -v wget >/dev/null 2>&1; then
-  su myriaadmin -c 'wget https://downloads-builds.myria.com/node/install.sh -O install.sh && sudo bash install.sh'
+  su myriaadmin 
+  wget https://downloads-builds.myria.com/node/install.sh
+  chmod 777 install.sh
+  ./install
+  
 else
   echo "wget command not found. Please install wget and try again."
 fi
