@@ -4,15 +4,15 @@
 apt update && apt upgrade -y
 
 # Configure SSH
-if grep -q "^PermitRootLogin yes" /etc/ssh/sshd_config; then
-  sudo sed -i 's/^PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
-  sudo systemctl restart ssh
-fi
+#if grep -q "^PermitRootLogin yes" /etc/ssh/sshd_config; then
+#  sudo sed -i 's/^PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
+#  sudo systemctl restart ssh
+#fi
 
-if grep -q "^#PasswordAuthentication yes" /etc/ssh/sshd_config; then
-  sudo sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
-  sudo systemctl restart ssh
-fi
+#if grep -q "^#PasswordAuthentication yes" /etc/ssh/sshd_config; then
+#  sudo sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+#  sudo systemctl restart ssh
+#fi
 
 # Install fail2ban
 sudo apt install fail2ban -y
